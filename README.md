@@ -23,6 +23,21 @@ Cloudflare Pages). Preview locally with any static server, e.g.:
 python3 -m http.server 8741
 ```
 
+## Owner questions (placeholders on the site)
+
+Every spot needing the owner's input is marked in-page with an amber
+`[BRACKETED PLACEHOLDER]` chip. The four highest-priority answers:
+
+1. **Which brands do you stock/cross-reference?** (unlocks the filter-finder
+   section and most SEO value)
+2. **Service area, city by city** (used in hero, footer, FAQ, contact)
+3. **Real numbers**: year founded, systems installed, counties served,
+   SKUs stocked (replaces the stats panel placeholders)
+4. **Differentiator in your own words** (the "What makes us different" slot)
+
+Plus: email address, exact legal entity name, 24-hour line details, parts
+quote turnaround, and 3 testimonials (slots are designed in on the homepage).
+
 ## Before launch
 
 1. **Wire up the contact form.** It currently shows a "call us" notice on submit

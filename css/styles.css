@@ -750,6 +750,169 @@ section.block.tint { background: var(--steel-100); }
 
 .contact-form-panel .btn { width: 100%; justify-content: center; margin-top: 20px; }
 
+/* ---------- Placeholder chips (content pending from owner) ---------- */
+
+.ph {
+  display: inline;
+  background: #fff8e1;
+  border: 1px dashed #d97706;
+  color: #92400e;
+  padding: 1px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 0.92em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* ---------- Filter finder ---------- */
+
+.finder-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.finder-steps { list-style: none; margin-top: 10px; }
+
+.finder-steps li {
+  display: flex;
+  gap: 18px;
+  padding: 16px 0;
+  align-items: flex-start;
+}
+
+.finder-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--orange-500);
+  color: #fff;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.finder-steps strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 1.06rem;
+  color: var(--navy-900);
+  margin-bottom: 3px;
+}
+
+.finder-steps p { color: var(--steel-500); font-size: 0.95rem; }
+
+.finder-panel {
+  background: var(--white);
+  border: 1px solid var(--steel-200);
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-shadow: var(--shadow-md);
+}
+
+.finder-panel h3 { margin-bottom: 12px; }
+.finder-panel p { color: var(--steel-500); font-size: 0.95rem; margin-bottom: 14px; }
+.finder-panel .btn { width: 100%; justify-content: center; margin-top: 8px; }
+.finder-panel .btn + .btn { margin-top: 12px; }
+
+/* ---------- Testimonials ---------- */
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.quote-card {
+  background: var(--white);
+  border: 1px solid var(--steel-200);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-mark {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 2.6rem;
+  color: var(--orange-500);
+  line-height: 1;
+}
+
+.quote-card > p {
+  color: var(--steel-500);
+  font-size: 0.97rem;
+  margin: 10px 0 18px;
+  flex-grow: 1;
+}
+
+.quote-who {
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.quote-who small {
+  display: block;
+  color: var(--steel-500);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+/* ---------- FAQ ---------- */
+
+.faq-list { max-width: 820px; margin: 0 auto; }
+
+.faq-list details {
+  background: var(--white);
+  border: 1px solid var(--steel-200);
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-list summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 22px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--navy-900);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-list summary::-webkit-details-marker { display: none; }
+
+.faq-list summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--orange-500);
+  flex-shrink: 0;
+}
+
+.faq-list details[open] summary::after { content: "–"; }
+
+.faq-list details > div {
+  padding: 0 22px 20px;
+  color: var(--steel-500);
+  font-size: 0.96rem;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -828,6 +991,7 @@ section.block.tint { background: var(--steel-100); }
 @media (max-width: 960px) {
   .trust-strip .container { grid-template-columns: repeat(2, 1fr); }
   .split { grid-template-columns: 1fr; gap: 44px; }
+  .finder-grid { grid-template-columns: 1fr; gap: 40px; }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-layout { grid-template-columns: 1fr; gap: 44px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
@@ -863,6 +1027,10 @@ section.block.tint { background: var(--steel-100); }
 
 @media (max-width: 760px) {
   .topbar .hours { display: none; }
+
+  /* The sticky call bar already covers "call us" on mobile — avoid a third
+     phone number in the same viewport. */
+  .hero .btn-tel { display: none; }
 
   .hero-inner { padding: 64px 0 72px; }
 
