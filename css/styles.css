@@ -29,6 +29,9 @@
 
 html { scroll-behavior: smooth; }
 
+/* Anchor targets land below the sticky header */
+[id] { scroll-margin-top: 96px; }
+
 body {
   font-family: var(--font-body);
   font-size: 16.5px;
@@ -822,6 +825,16 @@ section.block.tint { background: var(--steel-100); }
 .finder-panel p { color: var(--steel-500); font-size: 0.95rem; margin-bottom: 14px; }
 .finder-panel .btn { width: 100%; justify-content: center; margin-top: 8px; }
 .finder-panel .btn + .btn { margin-top: 12px; }
+
+/* ---------- Finder teaser (homepage) ---------- */
+
+.teaser-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
 
 /* ---------- Testimonials ---------- */
 

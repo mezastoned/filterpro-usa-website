@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mezastoned.github.io/filterpro-usa-website/sitemap.xml
