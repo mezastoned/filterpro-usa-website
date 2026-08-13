@@ -3,6 +3,10 @@
 Modern, professional rebuild of https://filterprousa.com/ (Filter Pro USA, LLC — Florida
 commercial/industrial air filtration, 954-866-5590).
 
+**Live preview:** https://mezastoned.github.io/filterpro-usa-website/
+
+This is a proposal/draft for review — not the live production site.
+
 ## Structure
 
 - `index.html` — Home: hero, trust strip, services overview, industries, why-us, process, CTA
