@@ -836,6 +836,36 @@ section.block.tint { background: var(--steel-100); }
   margin-top: 30px;
 }
 
+/* ---------- Recent work gallery ---------- */
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.work-card {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--steel-200);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.work-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.work-card figcaption {
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  color: var(--steel-500);
+}
+
 /* ---------- Testimonials ---------- */
 
 .quote-grid {
